@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Bia 💙</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      text-align: center;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/The_Starry_Night.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: inherit;
+      background-size: inherit;
+      background-position: inherit;
+      filter: blur(7px) brightness(0.55);
+      transform: scale(1.15);
+      z-index: -2;
+    }
+
+    /* Estrelas animadas */
+    .stars {
+      position: absolute;
+      inset: 0;
+      background: transparent;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #ffffff;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.3; }
+      50% { transform: translateY(-15px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.3; }
+    }
+
+    .card {
+      background: rgba(0, 0, 60, 0.5);
+      backdrop-filter: blur(6px);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 700px;
+      width: 90%;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      color: #a7c7ff;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      margin-bottom: 25px;
+      color: #dbe7ff;
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .music span {
+      display: block;
+      margin-bottom: 10px;
+      font-style: italic;
+      color: #bcd6ff;
+    }
+
+    iframe {
+      border-radius: 12px;
+      width: 100%;
+      height: 152px;
+      border: none;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #cfdcff;
+    }
+
+    /* Responsivo para celular */
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.1rem; }
+      p { font-size: 1.05rem; }
+      .card { padding: 25px; }
+      iframe { height: 120px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars">
+    <div class="star" style="top:10%; left:20%; animation-delay:0s"></div>
+    <div class="star" style="top:30%; left:70%; animation-delay:1s"></div>
+    <div class="star" style="top:60%; left:40%; animation-delay:2s"></div>
+    <div class="star" style="top:80%; left:80%; animation-delay:3s"></div>
+    <div class="star" style="top:50%; left:10%; animation-delay:4s"></div>
+    <div class="star" style="top:20%; left:90%; animation-delay:5s"></div>
+  </div>
+
+  <div class="card">
+    <h1>De: André</h1>
+    <h2>Para: Bia 💙</h2>
+
+    <p>
+      Tudo que contém a cor azul, lembra você...<br /><br />
+      A calmaria do céu, as ondas do mar, o azul que Djavan e Tim Maia retratavam em músicas,
+      o lírio azul, a noite estrelada de Van Gogh, a aurora boreal...
+    </p>
+
+    <div class="music">
+      <span>🎵 Sua música</span>
+      <iframe src="https://open.spotify.com/embed/track/76HOOcFt3lKVdScmoScfz1" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+
+    <footer>
+      Feito com carinho, sob um céu eternamente azul ✨
+    </footer>
+  </div>
+</body>
+</html>
